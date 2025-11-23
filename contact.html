@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lumora Group</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://via.placeholder.com/200x60?text=Lumora+Group" alt="Lumora Group">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li class="dropdown">
+                        <a href="subsidiaries.html" class="dropdown-toggle">
+                            Subsidiaries <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ayiikos-engineering.html">Ayiikos Engineering</a></li>
+                            <li><a href="hiba-general-trading.html">Hiba General Trading</a></li>
+                            <li><a href="mocha-enterprises.html">Mocha Enterprises</a></li>
+                            <li><a href="rabbai-agro.html">Rabbai Agro</a></li>
+                            <li><a href="alubol-mining.html">Alubol Mining</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" class="active btn-contact">Contact Us</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with Lumora Group and our subsidiaries</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to answer your questions and discuss how we can work together. Reach out to us through any of the following channels.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Head Office</h3>
+                                <p>City Mall, Juba<br>South Sudan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>+211 912 345 678<br>+211 912 345 679</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@lumoragroupss.com<br>inquiries@lumoragroupss.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Department/Subsidiary</label>
+                            <select id="department" name="department">
+                                <option value="">General Inquiry</option>
+                                <option value="engineering">Ayiikos Engineering</option>
+                                <option value="trading">Hiba General Trading</option>
+                                <option value="enterprises">Mocha Enterprises</option>
+                                <option value="agro">Rabbai Agro</option>
+                                <option value="mining">Alubol Mining</option>
+                                <option value="careers">Careers/HR</option>
+                                <option value="partnership">Partnerships</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Visit our head office in Juba, South Sudan</p>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>City Mall, Juba</h3>
+                        <p>South Sudan</p>
+                        <div class="map-actions">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subsidiary Contacts -->
+    <section class="section subsidiary-contacts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Subsidiary Contacts</h2>
+                <p>Get in touch with our specialized subsidiaries directly</p>
+            </div>
+            
+            <div class="subsidiaries-contact-grid">
+                <div class="subsidiary-contact-card">
+                    <div class="subsidiary-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Ayiikos" alt="Ayiikos Engineering">
+                    </div>
+                    <h3>Ayiikos Engineering Co. Ltd</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> engineering@lumoragroupss.com</p>
+                        <p><i class="fas fa-phone"></i> +211 912 345 679</p>
+                        <p><i class="fas fa-map-marker-alt"></i> City Mall, Juba</p>
+                    </div>
+                    <a href="subsidiaries/ayiikos-engineering.html" class="btn btn-outline">Visit Page</a>
+                </div>
+
+                <div class="subsidiary-contact-card">
+                    <div class="subsidiary-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Hiba" alt="Hiba General Trading">
+                    </div>
+                    <h3>Hiba General Trading Co. Ltd</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> supplies@lumoragroupss.com</p>
+                        <p><i class="fas fa-phone"></i> +211 912 345 680</p>
+                        <p><i class="fas fa-map-marker-alt"></i> City Mall, Juba</p>
+                    </div>
+                    <a href="subsidiaries/hiba-general-trading.html" class="btn btn-outline">Visit Page</a>
+                </div>
+
+                <div class="subsidiary-contact-card">
+                    <div class="subsidiary-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Mocha" alt="Mocha Enterprises">
+                    </div>
+                    <h3>Mocha Enterprises Co. Ltd</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> trade@lumoragroupss.com</p>
+                        <p><i class="fas fa-phone"></i> +211 912 345 681</p>
+                        <p><i class="fas fa-map-marker-alt"></i> City Mall, Juba</p>
+                    </div>
+                    <a href="subsidiaries/mocha-enterprises.html" class="btn btn-outline">Visit Page</a>
+                </div>
+
+                <div class="subsidiary-contact-card">
+                    <div class="subsidiary-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Rabbai" alt="Rabbai Agro">
+                    </div>
+                    <h3>Rabbai Agro Co. Ltd</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> agro@lumoragroupss.com</p>
+                        <p><i class="fas fa-phone"></i> +211 912 345 682</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Multiple farm locations</p>
+                    </div>
+                    <a href="subsidiaries/rabbai-agro.html" class="btn btn-outline">Visit Page</a>
+                </div>
+
+                <div class="subsidiary-contact-card">
+                    <div class="subsidiary-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Alubol" alt="Alubol Mining">
+                    </div>
+                    <h3>Alubol Mining & Investment Co. Ltd</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> mining@lumoragroupss.com</p>
+                        <p><i class="fas fa-phone"></i> +211 912 345 683</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mining regions across South Sudan</p>
+                    </div>
+                    <a href="subsidiaries/alubol-mining.html" class="btn btn-outline">Visit Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I partner with Lumora Group?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome partnership inquiries across all our business sectors. Please contact our partnerships team through the contact form above, specifying your area of interest. We typically respond to partnership inquiries within 2-3 business days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are your office hours?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our main office hours are Monday to Friday, 8:00 AM to 5:00 PM, and Saturday from 9:00 AM to 1:00 PM. Some subsidiaries may have different operating hours, especially those with field operations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I apply for job opportunities?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can apply for specific positions listed on our Careers page or submit your CV for general consideration. Please use the contact form and select "Careers/HR" as the department, or visit our Careers page for more information.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer emergency services?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Hiba General Trading provides 24/7 emergency response services for humanitarian organizations. For emergency procurement or logistics needs, please call our emergency line at +211 912 345 680.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/200x60?text=Lumora+Group" alt="Lumora Group">
+                    </div>
+                    <p>Building Tomorrow, Together. A diversified African holding group driving sustainable growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="subsidiaries.html">Subsidiaries</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> City Mall, Juba, South Sudan</li>
+                        <li><i class="fas fa-phone"></i> +211 912 345 678</li>
+                        <li><i class="fas fa-envelope"></i> info@lumoragroupss.com</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Subsidiary Contacts</h3>
+                    <ul class="subsidiary-contacts">
+                        <li>Engineering: engineering@lumoragroupss.com</li>
+                        <li>Supplies: supplies@lumoragroupss.com</li>
+                        <li>Trade: trade@lumoragroupss.com</li>
+                        <li>Agro: agro@lumoragroupss.com</li>
+                        <li>Mining: mining@lumoragroupss.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lumora Group Co. Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
