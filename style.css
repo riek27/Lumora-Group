@@ -254,28 +254,40 @@ img {
     color: var(--primary);
 }
 
-/* Hide toggle by default (desktop) */
+/* ===== DESKTOP DEFAULT ===== */
 .mobile-toggle {
-    display: none;
+    display: none; /* hidden on desktop */
     flex-direction: column;
     cursor: pointer;
 }
 
-/* Show toggle on screens smaller than 768px */
+.mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
     .mobile-toggle {
-        display: flex;  /* now visible */
+        display: flex; /* SHOW toggle on mobile */
     }
 
-    /* Hide nav list by default on mobile */
     .nav-list {
-        display: none;
+        display: none; /* hide menu initially */
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
     }
 
-    /* Show nav list when active */
     .nav-list.active {
-        display: flex;
+        display: flex; /* SHOW menu when JS adds .active */
     }
 }
 
