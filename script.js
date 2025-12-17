@@ -1,8 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-    /* =====================
-       MOBILE NAV TOGGLE
-       ===================== */
+    // ===== MOBILE NAV TOGGLE =====
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navList = document.querySelector('.nav-list');
 
@@ -12,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
             navList.classList.toggle('active');
         });
 
-        document.querySelectorAll('.nav-list a').forEach(link => {
+        // Close menu when clicking a link
+        navList.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileToggle.classList.remove('active');
                 navList.classList.remove('active');
@@ -20,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* =====================
-       SMOOTH SCROLL
-       ===================== */
+    // ===== SMOOTH SCROLL FOR ANCHORS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
             const target = document.querySelector(anchor.getAttribute('href'));
@@ -35,20 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    /* =====================
-       HEADER SHADOW
-       ===================== */
-    const header = document.querySelector('.header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            header.style.boxShadow =
-                window.scrollY > 100 ? '0 5px 15px rgba(0,0,0,.1)' : 'none';
-        });
-    }
-
-    /* =====================
-       HERO SCROLL INDICATOR
-       ===================== */
+    // ===== HERO SCROLL INDICATOR =====
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
@@ -56,6 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 top: window.innerHeight - 80,
                 behavior: 'smooth'
             });
+        });
+    }
+
+    // ===== HEADER SCROLL SHADOW =====
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            header.style.boxShadow = window.scrollY > 100 
+                ? '0 5px 15px rgba(0,0,0,.1)' 
+                : 'none';
         });
     }
 
