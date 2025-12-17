@@ -254,18 +254,29 @@ img {
     color: var(--primary);
 }
 
+/* Hide toggle by default (desktop) */
 .mobile-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.mobile-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--secondary);
-    margin: 3px 0;
-    transition: var(--transition);
+/* Show toggle on screens smaller than 768px */
+@media (max-width: 768px) {
+    .mobile-toggle {
+        display: flex;  /* now visible */
+    }
+
+    /* Hide nav list by default on mobile */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Show nav list when active */
+    .nav-list.active {
+        display: flex;
+    }
 }
 
 /* Hero Section - Fixed & Enhanced */
