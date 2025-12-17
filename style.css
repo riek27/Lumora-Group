@@ -3224,3 +3224,42 @@ img {
     }
 }
 
+/* ===============================
+   MOBILE NAV FIX (PASTE AT BOTTOM)
+   =============================== */
+
+@media (max-width: 768px) {
+
+    /* Make nav a flex row */
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    /* SHOW hamburger */
+    .mobile-toggle {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    /* Hide menu by default */
+    .nav-list {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    /* Show menu when JS adds .active */
+    .nav-list.active {
+        display: flex !important;
+    }
+}
