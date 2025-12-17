@@ -255,6 +255,26 @@ img {
 }
 
 /* ===== DESKTOP DEFAULT ===== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-list {
+    display: flex; /* visible on desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
 .mobile-toggle {
     display: none; /* hidden on desktop */
     flex-direction: column;
@@ -271,23 +291,37 @@ img {
 
 /* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
+
+    /* Show hamburger */
     .mobile-toggle {
-        display: flex; /* SHOW toggle on mobile */
+        display: flex;
+        position: relative;   /* needed for z-index */
+        z-index: 1000;        /* above menu */
     }
 
+    /* Hide menu initially */
     .nav-list {
-        display: none; /* hide menu initially */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background: #fff;
-        z-index: 999;
+        z-index: 999;          /* below hamburger */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 20px 0;
     }
 
+    /* Show menu when active */
     .nav-list.active {
-        display: flex; /* SHOW menu when JS adds .active */
+        display: flex;
+    }
+
+    /* Optional: make links larger on mobile */
+    .nav-list li {
+        margin: 15px 0;
+        text-align: center;
     }
 }
 
