@@ -3147,12 +3147,11 @@ img {
 }
 
 /* ===============================
-   MOBILE NAV FIX (PASTE AT BOTTOM)
+   MOBILE NAV — FINAL FIX
    =============================== */
 
 @media (max-width: 768px) {
 
-    /* Make nav a flex row */
     .nav {
         display: flex;
         justify-content: space-between;
@@ -3160,17 +3159,25 @@ img {
         position: relative;
     }
 
-    /* SHOW hamburger */
+    /* Hamburger */
     .mobile-toggle {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         cursor: pointer;
-        z-index: 9999;
+        z-index: 1001;
     }
 
-    /* Hide menu by default */
+    .mobile-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--secondary);
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+    /* Menu */
     .nav-list {
-        display: none !important;
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -3178,76 +3185,28 @@ img {
         background: #ffffff;
         flex-direction: column;
         padding: 20px 0;
-    }
-
-    /* Show menu when JS adds .active */
-    .nav-list.active {
-        display: flex !important;
-    }
-
-
-/* ===== DESKTOP DEFAULT ===== */
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001; /* always on top */
-}
-
-.mobile-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--secondary);
-    margin: 4px 0;
-    transition: 0.3s;
-}
-
-/* ===== MOBILE VIEW ===== */
-@media (max-width: 768px) {
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-    .mobile-toggle {
-        display: flex;
-    }
-
-    .nav-list {
-        display: none; /* hidden by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* header height */
-        left: 0;
-        width: 100%;
-        background: #fff;
-        padding: 20px 10px; /* spacing so links aren't at edge */
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        z-index: 1000;
-        max-height: calc(100vh - 60px); /* allow scrolling if menu too long */
-        overflow-y: auto;
+    }
+
+    .nav-list.active {
+        display: flex;
     }
 
     .nav-list li {
-        margin: 10px 0;
+        text-align: center;
+        margin: 15px 0;
     }
 
-    .nav-list.active {
-        display: flex;
+    /* Hamburger animation */
+    .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
-    /* Optional: style dropdowns inside mobile menu */
-    .nav-list .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: transparent;
-        padding-left: 15px;
+    .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
     }
 
-    .nav-list .dropdown-menu li {
-        margin: 5px 0;
+    .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
-}
 }
