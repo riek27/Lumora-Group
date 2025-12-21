@@ -6055,4 +6055,92 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
     animation: fadeIn 0.5s ease;
 }
 
+/* Job Details Expand/Collapse */
+.job-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    margin-top: 0;
+}
 
+.job-details.active {
+    max-height: 1000px; /* Adjust based on your content */
+    opacity: 1;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.job-details h4 {
+    color: var(--primary);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.job-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.job-details li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.job-excerpt {
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
+.job-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.read-more-btn {
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: var(--primary-light);
+}
+
+.read-more-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Job Cards Animation */
+.job-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .job-actions {
+        flex-direction: column;
+    }
+    
+    .job-actions .read-more-btn,
+    .job-actions .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
