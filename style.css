@@ -6144,3 +6144,75 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
         text-align: center;
     }
 }
+
+/* ====================
+   DESIGNER CREDIT
+   ==================== */
+
+.designer-credit {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.designer-credit p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.designer-name {
+    color: #FFD700 !important; /* Bright yellow */
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.designer-name:hover {
+    color: #FFE55C !important; /* Lighter yellow on hover */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    background-color: rgba(255, 215, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.designer-name:active {
+    transform: translateY(0);
+}
+
+/* Optional: Add a subtle animation effect */
+@keyframes designer-glow {
+    0% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+    50% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+    100% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+}
+
+.designer-name:hover {
+    animation: designer-glow 2s infinite;
+}
+
+/* For dark theme (if your footer is dark) */
+.footer .designer-credit {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* For light theme (if your footer is light) */
+/* .footer.light .designer-credit {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.footer.light .designer-name {
+    color: #FF8C00 !important;  Darker orange/yellow for light background 
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .designer-credit {
+        padding: 12px 0;
+        font-size: 0.85rem;
+    }
+}
