@@ -189,7 +189,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <strong>Email</strong>
-                            <p>trade@rahamgroupcoltd.com</p>
+                            <p>info-mocha@rahamgroupcoltd.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -216,32 +216,36 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Trade Inquiry Form</h3>
-                    <form class="subsidiary-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Company Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Contact Person" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Interest Type</option>
-                                <option value="import">Import Services</option>
-                                <option value="export">Export Services</option>
-                                <option value="investment">Investment Opportunity</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Product/Service Details" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-                    </form>
-                </div>
+    <h3>Trade Inquiry Form</h3>
+    <form name="trade-inquiry-form" method="POST" data-netlify="true" class="subsidiary-form">
+        <!-- Hidden input for Netlify form handling -->
+        <input type="hidden" name="form-name" value="trade-inquiry-form">
+
+        <div class="form-group">
+            <input type="text" name="company_name" placeholder="Company Name" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="contact_person" placeholder="Contact Person" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+            <select name="interest_type" required>
+                <option value="">Interest Type</option>
+                <option value="import">Import Services</option>
+                <option value="export">Export Services</option>
+                <option value="investment">Investment Opportunity</option>
+                <option value="partnership">Partnership Inquiry</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <textarea name="product_details" placeholder="Product/Service Details" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+    </form>
+</div>
+
             </div>
         </div>
     </section>
