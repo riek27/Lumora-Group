@@ -506,10 +506,7 @@ img {
 }
 
 .subsidiary-logo img {
-    height: 180px;
-    width: auto;
-    object-fit: contain;
-    display: block;
+    height: 200px !important;
 }
 
 
